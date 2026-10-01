@@ -99,6 +99,15 @@ button:hover {
   transform: translateY(-2px);
 }
 
+#clear-all-btn {
+  background-color: darkred;
+  margin-bottom: 1rem;
+}
+
+#clear-all-btn:hover {
+  background-color: #b22222;
+}
+
 #error-message {
   color: red;
   margin: 0.75rem 0 0;

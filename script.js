@@ -1,3 +1,4 @@
+const clearAllBtn = document.querySelector("#clear-all-btn");
 const form = document.querySelector("#note-form");
 const noteInput = document.querySelector("#note-input");
 const categorySelect = document.querySelector("#note-category");
@@ -114,5 +115,15 @@ form.addEventListener("submit", (event) => {
 
 searchInput.addEventListener("input", render);
 
+clearAllBtn.addEventListener("click", () => {
+  if (notes.length === 0) {
+    return;
+  }
+  if (confirm("Delete all notes?")) {
+    notes = [];
+    saveNotes();
+    render();
+  }
+});
 loadNotes();
 render();
